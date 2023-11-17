@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class calculadoraTeste {
+public class CalculadoraTeste {
     @Test
     @DisplayName("Deve retornar 1")
     public void Calculadora(){
@@ -20,8 +20,6 @@ public class calculadoraTeste {
     @DisplayName("Deve retornar um Erro no Calculo")
     public void CalculadoraErro() {
         CalculadoraUtil calculadoraUtil = new CalculadoraUtil();
-        assertThrows(ArithmeticException.class, () -> {
-            calculadoraUtil.dividir(4, 0);
-        });
+        assertThrows(ArithmeticException.class, () -> calculadoraUtil.dividir(4, 0));
     }
 }
